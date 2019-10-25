@@ -1,0 +1,85 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "description": "swagger REST API with CRUD",
+        "title": "movies API"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/app/insert/": {
+            "post": {
+                "summary": "find a list of all movies",
+                "description": "fetching the movies details",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "student object the need to be update",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully Validated."
+                    }
+                }
+            }
+        },
+        "/app/select": {
+            "get": {
+                "summary": "find a movie with movieId",
+                "description": "returns a single movie",
+                "operationId": "getMovieById",
+                
+                "responses": {
+                    "200": {
+                        "description": "Successfully fetched the data"
+                    }
+                }
+            }
+        },
+        "/app/update/": {
+            "put": {
+                "description": "Api of insert",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "student object the need to be update",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully Inserted."
+                    }
+                }
+            }
+        },
+        "/app/delete/": {
+            "delete": {
+                "description": "Api of insert",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "student object the need to be update",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully Inserted."
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}
